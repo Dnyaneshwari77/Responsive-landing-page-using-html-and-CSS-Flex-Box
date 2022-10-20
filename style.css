@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Fraunces', serif; */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-size: 14px;
+    background-color: hsl(30, 58%, 93%);
+}
+
+.body {
+   
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10% 5%;
+    /* overflow:scroll; */
+}
+
+.conatiner {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 100%);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+}
+
+.conatiner .img_background {
+    background-image: url("images/image-product-mobile.jpg");
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.discription {
+    width: 100%;
+    padding: 20px;
+}
+
+.discription span {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.discription h1 {
+    padding: 20px 0%;
+    font-size: 30px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+.discription p {
+    color: hsl(228, 12%, 48%);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+#oneprice {
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+    letter-spacing: normal;
+    padding-right: 20px;
+    font-family: 'Fraunces', serif;
+}
+
+#twoprice {
+    font-size: 1rem;
+    color: hsl(228, 12%, 48%);
+    text-align: center;
+    letter-spacing: normal;
+    text-decoration-line: line-through;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    width: 100%;
+    padding: 20px 30px;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 0.5rem;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    margin-bottom: 20px;
+}
+
+
+button:hover
+{
+    background-color:hsl(159, 33%, 17%) ;
+}
+
+
+@media (min-width:375px) {
+    .body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conatiner {
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: center; */
+        height: 450px;
+        max-width: 803px;
+    }
+
+    .conatiner .img_background {
+        background-image: url("images/image-product-desktop.jpg");
+        width: 20%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .discription {
+        max-width: 60%;
+        height: 100%;
+        display: flex;
+        /* background-color: aqua; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width:667px)
+{
+    .conatiner .img_background
+    {
+        width: 50%;
+    }
+    .discription
+    {
+        width: 50%;
+    }
+}
+
+
+@media (min-width:375px) and (max-width:676px) {
+    .body
+    {
+        padding: 2% 5%;
+    }
+
+    .conatiner .img_background {
+        background-image: url("images/image-product-desktop.jpg");
+        width: 50%;
+    }
+
+    .discription h1 {
+        padding: 10px 0%;
+    }
+    .discription p
+    {
+        padding-bottom: 10px;
+    }
+    button 
+    {
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width:375px) and (max-width:399px) {
+    .discription h1 
+    {
+        font-size: 20px;
+    }
+    .discription p
+    {
+        font-size: 0.7rem;
+    }
+    #oneprice
+    {
+        font-size: 1rem;
+    }
+    #twoprice
+    {
+        font-size: 0.7rem;
+    }
+    button 
+    {
+        padding: 10px 0px;
+    }
+}
+
